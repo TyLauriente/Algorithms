@@ -61,7 +61,7 @@ string EfficientReverseString(string input)
 	}
 
 	return input;
-}
+}//Big O(N) = (4 * (N/2)) + 2
 
 //main
 int main()

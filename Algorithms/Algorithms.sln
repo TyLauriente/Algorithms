@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Inclass Week 1", "Inclass W
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Inclass Week 1 Part 2", "Inclass Week 1 Part 2\Inclass Week 1 Part 2\Inclass Week 1 Part 2.vcxproj", "{3A637A22-FFA9-422F-9A2E-534C517BD430}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynamicArray", "DynamicArray\DynamicArray.vcxproj", "{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,12 +33,20 @@ Global
 		{3A637A22-FFA9-422F-9A2E-534C517BD430}.Release|x64.Build.0 = Release|x64
 		{3A637A22-FFA9-422F-9A2E-534C517BD430}.Release|x86.ActiveCfg = Release|Win32
 		{3A637A22-FFA9-422F-9A2E-534C517BD430}.Release|x86.Build.0 = Release|Win32
+		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Debug|x64.ActiveCfg = Debug|x64
+		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Debug|x64.Build.0 = Debug|x64
+		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Debug|x86.ActiveCfg = Debug|Win32
+		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Debug|x86.Build.0 = Debug|Win32
+		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Release|x64.ActiveCfg = Release|x64
+		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Release|x64.Build.0 = Release|x64
+		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Release|x86.ActiveCfg = Release|Win32
+		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
+		SccNumberOfProjects = 4
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tylauriente.visualstudio.com/
 		SccLocalPath0 = .
@@ -46,5 +56,8 @@ Global
 		SccProjectUniqueName2 = Inclass\u0020Week\u00201\\Inclass\u0020Week\u00201\\Inclass\u0020Week\u00201.vcxproj
 		SccProjectName2 = Inclass\u0020Week\u00201/Inclass\u0020Week\u00201
 		SccLocalPath2 = Inclass\u0020Week\u00201\\Inclass\u0020Week\u00201
+		SccProjectUniqueName3 = DynamicArray\\DynamicArray.vcxproj
+		SccProjectName3 = DynamicArray
+		SccLocalPath3 = DynamicArray
 	EndGlobalSection
 EndGlobal

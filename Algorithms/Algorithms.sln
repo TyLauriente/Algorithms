@@ -7,7 +7,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Inclass Week 1", "Inclass W
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Inclass Week 1 Part 2", "Inclass Week 1 Part 2\Inclass Week 1 Part 2\Inclass Week 1 Part 2.vcxproj", "{3A637A22-FFA9-422F-9A2E-534C517BD430}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynamicArray", "DynamicArray\DynamicArray.vcxproj", "{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynamicArray", "DynamicArray\DynamicArray.vcxproj", "{40EDC14F-E33E-4820-8201-D7F1A3D8A0FB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedList", "LinkedList\LinkedList.vcxproj", "{1AC8FC54-747D-4FC6-807D-431661F2658C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,20 +35,28 @@ Global
 		{3A637A22-FFA9-422F-9A2E-534C517BD430}.Release|x64.Build.0 = Release|x64
 		{3A637A22-FFA9-422F-9A2E-534C517BD430}.Release|x86.ActiveCfg = Release|Win32
 		{3A637A22-FFA9-422F-9A2E-534C517BD430}.Release|x86.Build.0 = Release|Win32
-		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Debug|x64.ActiveCfg = Debug|x64
-		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Debug|x64.Build.0 = Debug|x64
-		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Debug|x86.ActiveCfg = Debug|Win32
-		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Debug|x86.Build.0 = Debug|Win32
-		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Release|x64.ActiveCfg = Release|x64
-		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Release|x64.Build.0 = Release|x64
-		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Release|x86.ActiveCfg = Release|Win32
-		{685960E7-E3F1-4CB7-A6D3-83F6C6ECA5B5}.Release|x86.Build.0 = Release|Win32
+		{40EDC14F-E33E-4820-8201-D7F1A3D8A0FB}.Debug|x64.ActiveCfg = Debug|x64
+		{40EDC14F-E33E-4820-8201-D7F1A3D8A0FB}.Debug|x64.Build.0 = Debug|x64
+		{40EDC14F-E33E-4820-8201-D7F1A3D8A0FB}.Debug|x86.ActiveCfg = Debug|Win32
+		{40EDC14F-E33E-4820-8201-D7F1A3D8A0FB}.Debug|x86.Build.0 = Debug|Win32
+		{40EDC14F-E33E-4820-8201-D7F1A3D8A0FB}.Release|x64.ActiveCfg = Release|x64
+		{40EDC14F-E33E-4820-8201-D7F1A3D8A0FB}.Release|x64.Build.0 = Release|x64
+		{40EDC14F-E33E-4820-8201-D7F1A3D8A0FB}.Release|x86.ActiveCfg = Release|Win32
+		{40EDC14F-E33E-4820-8201-D7F1A3D8A0FB}.Release|x86.Build.0 = Release|Win32
+		{1AC8FC54-747D-4FC6-807D-431661F2658C}.Debug|x64.ActiveCfg = Debug|x64
+		{1AC8FC54-747D-4FC6-807D-431661F2658C}.Debug|x64.Build.0 = Debug|x64
+		{1AC8FC54-747D-4FC6-807D-431661F2658C}.Debug|x86.ActiveCfg = Debug|Win32
+		{1AC8FC54-747D-4FC6-807D-431661F2658C}.Debug|x86.Build.0 = Debug|Win32
+		{1AC8FC54-747D-4FC6-807D-431661F2658C}.Release|x64.ActiveCfg = Release|x64
+		{1AC8FC54-747D-4FC6-807D-431661F2658C}.Release|x64.Build.0 = Release|x64
+		{1AC8FC54-747D-4FC6-807D-431661F2658C}.Release|x86.ActiveCfg = Release|Win32
+		{1AC8FC54-747D-4FC6-807D-431661F2658C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
+		SccNumberOfProjects = 5
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tylauriente.visualstudio.com/
 		SccLocalPath0 = .
@@ -59,5 +69,8 @@ Global
 		SccProjectUniqueName3 = DynamicArray\\DynamicArray.vcxproj
 		SccProjectName3 = DynamicArray
 		SccLocalPath3 = DynamicArray
+		SccProjectUniqueName4 = LinkedList\\LinkedList.vcxproj
+		SccProjectName4 = LinkedList
+		SccLocalPath4 = LinkedList
 	EndGlobalSection
 EndGlobal

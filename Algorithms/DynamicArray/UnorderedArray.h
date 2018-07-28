@@ -102,6 +102,54 @@ public:
 		}
 		return false;
 	}
+
+	int BinarySearch(T value)
+	{
+		Sort();
+		int startIndex = 0;
+		int endIndex = m_size - 1;
+
+		while (endIndex != startIndex)
+		{
+			int index = static_cast<int>((startIndex + endIndex) * 0.5);
+			if (m_array[index] > value)
+			{
+				endIndex = index;
+			}
+			else if (m_array[index] < value)
+			{
+				startIndex = index;
+			}
+			else
+			{
+				return index;
+			}
+		}
+
+		return -1;
+	}
+
+	template<typename Type>
+	void Swap(Type& var1, Type& var2)
+	{
+		Type temp = var1;
+		var1 = var2;
+		var2 = temp;
+	}
+
+	void Sort()
+	{
+		for (int index1 = 0; index1 < m_size; ++index1)
+		{
+			for (int index2 = 0; index2 < m_size - index1 - 1; ++index2)
+			{
+				if (m_array[index2] > m_array[index2 + 1])
+				{
+					Swap(m_array[index2], m_array[index2 + 1]);
+				}
+			}
+		}
+	}
 	
 	
 private:

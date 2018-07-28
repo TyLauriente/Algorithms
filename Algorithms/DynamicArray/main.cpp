@@ -4,19 +4,20 @@
 int main()
 {
 	UnorderredArray<int> iArray(1);
-	iArray[0] = 0;
+	iArray[0] = 10;
+	iArray.Add(15);
+	iArray.Add(2);
+	iArray.Add(6);
+	iArray.Add(12);
+	iArray.Add(17);
+	iArray.Add(54);
+	iArray.Add(33);
+	iArray.Add(5);
 	
-	for (int index = 1; index <= 1000; ++index)
-	{
-		iArray.Add(index);
-	}
-	
-	for (int index = 100; index <= 200; ++index)
-	{
-		iArray.RemoveByValue(index);
-	}
 
+	std::cout << "Result: " << iArray.BinarySearch(33) << std::endl;
 	iArray.PrintAll();
+	
 
 	system("pause");
 	return 0;

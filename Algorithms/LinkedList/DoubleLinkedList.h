@@ -1,18 +1,18 @@
 #pragma once
 
-#include"Node.h"
+#include"DoubleNode.h"
 
 template<typename T>
-class LinkedList
+class DoubleLinkedList
 {
 public:
-	~LinkedList()
+	~DoubleLinkedList()
 	{
 		if (head)
 		{
 			while (head->next)
 			{
-				Node<T>* temp = head->next;
+				DoubleNode<T>* temp = head->next;
 				delete head;
 				head = temp;
 			}
@@ -24,7 +24,7 @@ public:
 
 	T& Get(int pos)
 	{
-		Node<T>* node = head;
+		DoubleNode<T>* node = head;
 		int index = 0;
 		while (node->next && index != pos)
 		{
@@ -34,9 +34,9 @@ public:
 		return node->data;
 	}
 
-	Node<T>* GetNode(int pos)
+	DoubleNode<T>* GetNode(int pos)
 	{
-		Node<T>* node = head;
+		DoubleNode<T>* node = head;
 		int index = 0;
 		while (node->next && index != pos)
 		{
@@ -48,20 +48,30 @@ public:
 
 	void AddFirst(T value)
 	{
-		Node<T>* add = new Node<T>();
-		add->data = value;
-
-		add->next = head;
-		head = add;
-	}
-
-	void AddLast(T value)
-	{
-		Node<T>* add = new Node<T>();
+		DoubleNode<T>* add = new DoubleNode<T>();
 		add->data = value;
 
 		if (head)
 		{
+			add->next = head;
+			head->previous = add;
+			head = add;
+		}
+		else
+		{
+			head = add;
+			tail = add;
+		}
+	}
+
+	void AddLast(T value)
+	{
+		DoubleNode<T>* add = new DoubleNode<T>();
+		add->data = value;
+
+		if (tail)
+		{
+			add->previous = tail;
 			tail->next = add;
 			tail = add;
 		}
@@ -72,9 +82,14 @@ public:
 		}
 	}
 
-	Node<T>* Find(T value)
+	DoubleNode<T>* Find(T value)
 	{
-		Node<T>* node = head;
+		if (!head)
+		{
+			throw;
+		}
+
+		DoubleNode<T>* node = head;
 		while (node->next && node->data != value)
 		{
 			node = node->next;
@@ -82,17 +97,12 @@ public:
 		return node;
 	}
 
-	Node<T>* FindPrevious(Node<T>* node)
+	DoubleNode<T>* FindPrevious(DoubleNode<T>* node)
 	{
-		Node<T>* previous = head;
-		while (previous->next != node)
-		{
-			previous = previous->next;
-		}
-		return previous;
+		return node->previous;
 	}
 
-	void Remove(Node<T>* node)
+	void Remove(DoubleNode<T>* node)
 	{
 		if (node == head)
 		{
@@ -104,7 +114,8 @@ public:
 		}
 		else
 		{
-			(FindPrevious(node))->next = node->next;
+			node->previous->next = node->next;
+			node->next->previous = node->previous;
 			delete node;
 			node = nullptr;
 		}
@@ -131,7 +142,6 @@ public:
 				tail = nullptr;
 			}
 		}
-
 	}
 
 	void RemoveLast()
@@ -158,27 +168,23 @@ public:
 		}
 	}
 
-	void RemoveNodeWithoutHead(Node<T>* node)
+	int GetSize()
 	{
-		if (node->next)
+		if (!head)
 		{
-			Node<T>* previous;
-			while (node->next)
-			{
-				node->data = node->next->data;
-				previous = node;
-				node = node->next;
-			}
-			delete node;
-			previous->next = nullptr;
+			return 0;
 		}
-		else
+
+		int size = 1;
+		while (head->next)
 		{
-			cout << "ERROR IN LINKEDLIST: Node given is last node" << endl;
+			size++;
+			head = head->next;
 		}
+		return size;
 	}
 
 private:
-	Node<T> *head = nullptr;
-	Node<T> *tail = nullptr;
+	DoubleNode<T> *head = nullptr;
+	DoubleNode<T> *tail = nullptr;
 };

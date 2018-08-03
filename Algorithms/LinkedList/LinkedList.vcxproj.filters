@@ -3,6 +3,8 @@
   <ItemGroup>
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="DoubleLinkedList.h" />
+    <ClInclude Include="DoubleNode.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

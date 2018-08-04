@@ -106,7 +106,7 @@ Pair FindFirstAndLast(int arr[], int size, int find)// O(N) = N
 
 //Question 4
 
-string SortString(string str)
+string SortString(string str)// O(N) = N^2
 {
 	for (int index1 = 0; index1 < str.size() - 1; index1++)
 		for (int index2 = 0; index2 < str.size() - index1 - 1; index2++)

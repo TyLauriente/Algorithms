@@ -6,6 +6,8 @@ template<typename T>
 class LinkedList
 {
 public:
+
+	LinkedList() {}
 	~LinkedList()
 	{
 		if (head)
@@ -21,6 +23,77 @@ public:
 		head = nullptr;
 		tail = nullptr;
 	}
+
+	//Copy Constructor
+	LinkedList(const LinkedList<T>& other)
+	{
+		if (other.head)
+		{
+			head = new Node<T>;
+			head->data = other.head->data;
+			Node<T>* otherCurrent = other.head;
+			Node<T>* thisCurrent = head;
+			while (otherCurrent->next)
+			{
+				thisCurrent->next = new Node<T>;
+				thisCurrent->next->data = otherCurrent->next->data;
+				thisCurrent = thisCurrent->next;
+				otherCurrent = otherCurrent->next;
+			}
+			tail = thisCurrent;
+		}
+	}
+
+	//Copy assignment
+	LinkedList& operator = (const LinkedList<T>& other)
+	{
+		if (this != &other)
+		{
+			if (other.head)
+			{
+				this->~LinkedList();
+				head= new Node<T>;
+				head->data = other.head->data;
+				Node<T>* otherCurrent = other.head;
+				Node<T>* thisCurrent = head;
+				while (otherCurrent->next)
+				{
+					thisCurrent->next = new Node<T>;
+					thisCurrent->next->data = otherCurrent->next->data;
+					thisCurrent = thisCurrent->next;
+					otherCurrent = otherCurrent->next;
+				}
+				tail = thisCurrent;
+			}
+		}
+		return *this;
+	}
+
+	//Move Construcotr
+	LinkedList(LinkedList<T>& other)
+		: head{ nullptr }
+		, tail{ nullptr }
+	{
+		head = other.head;
+		tail = other.tail;
+		other.head = nullptr;
+		other.tail = nullptr;
+	}
+
+	//Move Assignment operator
+	LinkedList& operator = (LinkedList<T>& other)
+	{
+		if (this != &other)
+		{
+			this->~LinkedList();
+			head = other.head;
+			tail = other.tail;
+			other.head = nullptr;
+			other.tail = nullptr;
+		}
+		return *this;
+	}
+
 
 	T& Get(int pos)
 	{
@@ -112,26 +185,21 @@ public:
 
 	void RemoveFirst()
 	{
-		if (head && head != tail)
+		if (head)
 		{
-			auto newHead = head->next;
-			delete head;
-			head = newHead;
-		}
-		else
-		{
-			if (head)
+			if (head == tail)
 			{
 				delete head;
 				head = nullptr;
-			}
-			if (tail)
-			{
-				delete tail;
 				tail = nullptr;
 			}
+			else
+			{
+				Node<T>* next = head->next;
+				delete head;
+				head = next;
+			}
 		}
-
 	}
 
 	void RemoveLast()
@@ -178,7 +246,7 @@ public:
 		}
 	}
 
-private:
+protected:
 	Node<T> *head = nullptr;
 	Node<T> *tail = nullptr;
 };

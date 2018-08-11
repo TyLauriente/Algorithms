@@ -1,0 +1,10 @@
+object DoSomething(int value
+{
+	object t = new object(value);
+	return object;
+}
+
+int main()
+{
+	object t = DoSomething();	
+}

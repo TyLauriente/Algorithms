@@ -1,4 +1,4 @@
-object DoSomething(int value
+object DoSomething(int value)
 {
 	object t = new object(value);
 	return object;

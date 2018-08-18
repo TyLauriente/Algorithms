@@ -149,8 +149,10 @@ public:
 				}
 			}
 		}
+
 	}
 	
+	int Size() { return m_size; }
 	
 private:
 	const int GROWTH_FACTOR = 2;

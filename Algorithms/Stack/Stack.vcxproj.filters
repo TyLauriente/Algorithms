@@ -4,6 +4,7 @@
     <ClInclude Include="Stack.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="StackArray.h" />
+    <ClInclude Include="Queue2Stacks.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

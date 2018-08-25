@@ -87,7 +87,7 @@ public:
 	{
 		for (int index = 0; index < m_size; ++index)
 		{
-			m_array[index] = T;
+			m_array[index] = T();
 		}
 	}
 

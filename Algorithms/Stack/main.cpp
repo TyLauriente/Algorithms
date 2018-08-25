@@ -98,13 +98,13 @@ bool HasError(string code)
 		}
 		if (Contains(closeSymbols, c))
 		{
-			if (stack.size == 0 || stack.Pop() != InvertChar(c))
+			if (stack.Size() == 0 || stack.Pop() != InvertChar(c))
 			{
 				return true;
 			}
 		}
 	}
-	if (stack.size > 0)
+	if (stack.Size() > 0)
 	{
 		return true;
 	}

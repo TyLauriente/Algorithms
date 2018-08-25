@@ -18,7 +18,7 @@ class StackArray
 {
 public:
 
-	StackArray<T>() : m_array(10, 2), size(0) { }
+	StackArray<T>() : m_array(10, 2), m_size(0) { }
 
 
 	~StackArray() { }
@@ -36,37 +36,51 @@ public:
 
 	void Push(T value)
 	{
-		m_array.Get(size) = value;
-		size++;
+		m_array.Add(value);
+		m_size++;
 	}
 
 	T Peak()
 	{
-		CheckNull();
-		return m_array.Get(size - 1);
+		if (CheckNull())
+		{
+			throw StackEmptyException();
+		}
+		return m_array.Get(m_size - 1);
 	}
 
 	T Pop()
 	{
-		CheckNull();
-		T data = m_array.Get(size - 1);
-		m_array.RemoveByIndex(size - 1);
-		size--;
-		return data;
-	}
-
-	
-	int size;
-protected:
-	UnorderredArray<T> m_array;
-
-	void CheckNull()
-	{
-		if (size <= 0)
+		if (CheckNull())
 		{
 			throw StackEmptyException();
 		}
+		T data = m_array.Get(m_size - 1);
+		m_array.RemoveByIndex(m_size - 1);
+		m_size--;
+		return data;
 	}
+
+	void Clear()
+	{
+		m_size = 0;
+		m_array.Clear();
+	}
+
+	int Size() { return m_size; }
+
+	bool CheckNull()
+	{
+		if (m_size <= 0)
+		{
+			return true;
+		}
+		return false;
+	}
+	
+protected:
+	UnorderredArray<T> m_array;
+	int m_size;
 };
 
 /*

@@ -73,28 +73,36 @@ public:
 
 	T Peak()
 	{
-		CheckNull();
+		if (CheckNull())
+		{
+			throw StackEmptyException();
+		}
 		return m_list.Get(0);
 	}
 	
 	T Pop()
 	{
-		CheckNull();
+		if (CheckNull())
+		{
+			throw StackEmptyException();
+		}
 		T data = m_list.Get(0);
 		m_list.RemoveFirst();
 		count--;
 		return data;
 	}
 
+	bool CheckNull()
+	{
+		if (count <= 0)
+		{
+			return true;
+		}
+		return false;
+	}
+
 	int count = 0;
 protected:
 	LinkedList<T> m_list;
 
-	void CheckNull()
-	{
-		if (count <= 0)
-		{
-			throw StackEmptyException();
-		}
-	}
 };

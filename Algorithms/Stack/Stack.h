@@ -7,13 +7,13 @@
 
 
 
-struct StackEmptyException: public std::exception
-{
-	const char * what() const throw ()
-	{
-		return "Stack is Empty";
-	}
-};
+//struct StackEmptyException: public std::exception
+//{
+//	const char * what() const throw ()
+//	{
+//		return "Stack is Empty";
+//	}
+//};
 
 
 template <typename T>
@@ -75,7 +75,7 @@ public:
 	{
 		if (CheckNull())
 		{
-			throw StackEmptyException();
+			throw;
 		}
 		return m_list.Get(0);
 	}
@@ -84,7 +84,7 @@ public:
 	{
 		if (CheckNull())
 		{
-			throw StackEmptyException();
+			throw;
 		}
 		T data = m_list.Get(0);
 		m_list.RemoveFirst();

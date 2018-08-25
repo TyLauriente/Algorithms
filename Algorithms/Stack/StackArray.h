@@ -2,7 +2,8 @@
 
 #include<exception>
 #include<iostream>
-#include"..\DynamicArray\UnorderedArray.h"
+#include<vector>
+
 
 struct StackEmptyException : public std::exception
 {
@@ -18,7 +19,7 @@ class StackArray
 {
 public:
 
-	StackArray<T>() : m_array(10, 2), m_size(0) { }
+	StackArray<T>() { }
 
 
 	~StackArray() { }
@@ -36,7 +37,7 @@ public:
 
 	void Push(T value)
 	{
-		m_array.Add(value);
+		m_array.push_back(value);
 		m_size++;
 	}
 
@@ -46,7 +47,7 @@ public:
 		{
 			throw StackEmptyException();
 		}
-		return m_array.Get(m_size - 1);
+		return m_array[m_size - 1];
 	}
 
 	T Pop()
@@ -55,8 +56,9 @@ public:
 		{
 			throw StackEmptyException();
 		}
-		T data = m_array.Get(m_size - 1);
-		m_array.RemoveByIndex(m_size - 1);
+
+		T data = m_array[m_size - 1];
+		m_array.pop_back();
 		m_size--;
 		return data;
 	}
@@ -64,7 +66,7 @@ public:
 	void Clear()
 	{
 		m_size = 0;
-		m_array.Clear();
+		m_array.clear();
 	}
 
 	int Size() { return m_size; }
@@ -79,8 +81,8 @@ public:
 	}
 	
 protected:
-	UnorderredArray<T> m_array;
-	int m_size;
+	std::vector<T> m_array;
+	int m_size = 0;
 };
 
 /*

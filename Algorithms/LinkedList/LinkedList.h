@@ -1,6 +1,8 @@
 #pragma once
 
 #include"Node.h"
+#include"..\Stack\StackArray.h"
+
 
 template<typename T>
 class LinkedList
@@ -243,6 +245,38 @@ public:
 		else
 		{
 			cout << "ERROR IN LINKEDLIST: Node given is last node" << endl;
+		}
+	}
+
+	void Clear()
+	{
+		Node<T>* node = head;
+		while (head->next)
+		{
+			Node<T>* temp = node;
+			node = node->next;
+			delete temp;
+			temp = nullptr;
+		}
+		delete node;
+		node = nullptr;
+	}
+
+	void Reverse()
+	{
+		StackArray<T> stack;
+		Node<T>* node = head;
+		stack.Push(node->data);
+		while (node->next)
+		{
+			node = node->next;
+			stack.Push(node->data);
+			RemoveFirst();
+		}
+		RemoveFirst();
+		while (stack.Size() > 0)
+		{
+			AddLast(stack.Pop());
 		}
 	}
 

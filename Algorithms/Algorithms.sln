@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stack", "Stack\Stack.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quiz (Reverse LinkedList)", "Quiz (Reverse LinkedList)\Quiz (Reverse LinkedList).vcxproj", "{862D1A0E-167F-4C86-A668-6D25B83E7B56}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sets", "Sets\Sets.vcxproj", "{DEE520A9-A3CF-4D66-AD47-75EE2E3189CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,12 +83,23 @@ Global
 		{862D1A0E-167F-4C86-A668-6D25B83E7B56}.Release|x64.Build.0 = Release|x64
 		{862D1A0E-167F-4C86-A668-6D25B83E7B56}.Release|x86.ActiveCfg = Release|Win32
 		{862D1A0E-167F-4C86-A668-6D25B83E7B56}.Release|x86.Build.0 = Release|Win32
+		{DEE520A9-A3CF-4D66-AD47-75EE2E3189CD}.Debug|x64.ActiveCfg = Debug|x64
+		{DEE520A9-A3CF-4D66-AD47-75EE2E3189CD}.Debug|x64.Build.0 = Debug|x64
+		{DEE520A9-A3CF-4D66-AD47-75EE2E3189CD}.Debug|x86.ActiveCfg = Debug|Win32
+		{DEE520A9-A3CF-4D66-AD47-75EE2E3189CD}.Debug|x86.Build.0 = Debug|Win32
+		{DEE520A9-A3CF-4D66-AD47-75EE2E3189CD}.Release|x64.ActiveCfg = Release|x64
+		{DEE520A9-A3CF-4D66-AD47-75EE2E3189CD}.Release|x64.Build.0 = Release|x64
+		{DEE520A9-A3CF-4D66-AD47-75EE2E3189CD}.Release|x86.ActiveCfg = Release|Win32
+		{DEE520A9-A3CF-4D66-AD47-75EE2E3189CD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A56A841-3058-4EC5-8F61-2653C260F075}
+	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
+		SccNumberOfProjects = 9
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tylauriente.visualstudio.com/
 		SccLocalPath0 = .
@@ -111,5 +124,8 @@ Global
 		SccProjectUniqueName7 = Quiz\u0020(Reverse\u0020LinkedList)\\Quiz\u0020(Reverse\u0020LinkedList).vcxproj
 		SccProjectName7 = Quiz\u0020(Reverse\u0020LinkedList)
 		SccLocalPath7 = Quiz\u0020(Reverse\u0020LinkedList)
+		SccProjectUniqueName8 = Sets\\Sets.vcxproj
+		SccProjectName8 = Sets
+		SccLocalPath8 = Sets
 	EndGlobalSection
 EndGlobal

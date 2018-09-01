@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quiz (Reverse LinkedList)",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sets", "Sets\Sets.vcxproj", "{DEE520A9-A3CF-4D66-AD47-75EE2E3189CD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hashing", "Hashing\Hashing.vcxproj", "{5C0851B0-81B7-4100-8007-E696B0DC006F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{DEE520A9-A3CF-4D66-AD47-75EE2E3189CD}.Release|x64.Build.0 = Release|x64
 		{DEE520A9-A3CF-4D66-AD47-75EE2E3189CD}.Release|x86.ActiveCfg = Release|Win32
 		{DEE520A9-A3CF-4D66-AD47-75EE2E3189CD}.Release|x86.Build.0 = Release|Win32
+		{5C0851B0-81B7-4100-8007-E696B0DC006F}.Debug|x64.ActiveCfg = Debug|x64
+		{5C0851B0-81B7-4100-8007-E696B0DC006F}.Debug|x64.Build.0 = Debug|x64
+		{5C0851B0-81B7-4100-8007-E696B0DC006F}.Debug|x86.ActiveCfg = Debug|Win32
+		{5C0851B0-81B7-4100-8007-E696B0DC006F}.Debug|x86.Build.0 = Debug|Win32
+		{5C0851B0-81B7-4100-8007-E696B0DC006F}.Release|x64.ActiveCfg = Release|x64
+		{5C0851B0-81B7-4100-8007-E696B0DC006F}.Release|x64.Build.0 = Release|x64
+		{5C0851B0-81B7-4100-8007-E696B0DC006F}.Release|x86.ActiveCfg = Release|Win32
+		{5C0851B0-81B7-4100-8007-E696B0DC006F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,7 +109,7 @@ Global
 		SolutionGuid = {7A56A841-3058-4EC5-8F61-2653C260F075}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
+		SccNumberOfProjects = 10
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tylauriente.visualstudio.com/
 		SccLocalPath0 = .
@@ -127,5 +137,8 @@ Global
 		SccProjectUniqueName8 = Sets\\Sets.vcxproj
 		SccProjectName8 = Sets
 		SccLocalPath8 = Sets
+		SccProjectUniqueName9 = Hashing\\Hashing.vcxproj
+		SccProjectName9 = Hashing
+		SccLocalPath9 = Hashing
 	EndGlobalSection
 EndGlobal

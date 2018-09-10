@@ -6,31 +6,25 @@
 #include<ctime>
 #include"DataLogger.h"
 
-static void WriteData(int data)
-{
-	static int count = 1;
-	std::ofstream file("Log.txt", std::ios::app);
-	std::string dataToWrite;
-	dataToWrite = "=-=-=-=-=-=-= Entry #" + std::to_string(count) + " -=-=-=-=-=-=-=-=-\n" + std::to_string(data);
-	file << dataToWrite << std::endl << std::endl;
-	count++;	
-}
 
+std::string ConvertToTextFunc(int num)
+{
+	return std::to_string(num);
+}
 
 int main()
 {
-	DataLogger<int> log(WriteData);
-
-	std::cout << "start" << std::endl;
-	for (int index = 0; index < 10000; ++index)
+	using namespace std;
+	DataLogger<int> log(ConvertToTextFunc, ArraySize::High);
+	
+	cout << "start" << endl;
+	for (int index = 1; index <= 10000000; ++index)
 	{
-		log.AddDataToWrite(index);
+		log.LogItem(index);
 	}
-	std::cout << "end" << std::endl;
+	cout << "end" << endl;
 
-	log.WriteRemaining();
-
-	std::cin.get();
+	log.ForceLogAll();
 
 	system("pause");
 	return 0;
